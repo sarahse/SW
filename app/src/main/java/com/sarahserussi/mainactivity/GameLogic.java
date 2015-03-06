@@ -13,11 +13,6 @@ public class GameLogic {
     private Player player2; //player on the right side
     private Speed speed;
 
-    private int speed2;
-    private int speed3;
-    private int speed4;
-    private int speed5;
-    private int speed6;
 
     /* method that ensures the ball bounces off of the walls, but not the ceiling */
     private void bounceWall(){
