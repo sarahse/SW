@@ -14,6 +14,7 @@ public class GameLogic {
     private Speed speed;
 
     private int speed2;
+    private int speed3;
 
     /* method that ensures the ball bounces off of the walls, but not the ceiling */
     private void bounceWall(){
