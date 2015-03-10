@@ -11,6 +11,11 @@ public class StartMenu {
     private Button connplayButton;
     private Button quitButton;
 
+    /* Constructor that creates new startMenu */
+    public StartMenu(){
+
+    }
+
     protected void onButtonsClicked(){
         if (rulesButton.isPressed()){
             new RulesView();
