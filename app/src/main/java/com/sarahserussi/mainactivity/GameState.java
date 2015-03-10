@@ -20,16 +20,33 @@ public class GameState {
 
     }
 
-    public void update() {
+    public void update(MotionEvent e) {
         //if event.getX is left of playerPos - move player left
         //move player right
         //player jump
 
+        int a = e.getActionMasked();
+        int aIndex = e.getActionIndex();
+        int x,y;
+        switch(a) {
+            case MotionEvent.ACTION_DOWN:
+            case MotionEvent.ACTION_POINTER_DOWN:
+            case MotionEvent.ACTION_MOVE:
+                x = (int)e.getX(aIndex);
+                y = (int)e.getY(aIndex);
+
+                /*if(m.leftPressed(x, y)) {
+                    movingLeft = true;
+                    movingRight = false;
+                    }
+                  */
     }
 
     public boolean onTouchEvent(MotionEvent event) {
         eX = event.getX();
         eY = event.getY();
+
+
 
         update();
         return true;
