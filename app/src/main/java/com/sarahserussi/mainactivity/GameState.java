@@ -5,5 +5,8 @@ package com.sarahserussi.mainactivity;
  */
 public class GameState {
 
+
     /* Where the touch methods go */
+
+
 }
