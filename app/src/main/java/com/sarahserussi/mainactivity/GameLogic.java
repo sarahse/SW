@@ -19,10 +19,10 @@ public class GameLogic {
     }
 
     /* method that ensures the ball bounces off of the walls, but not the ceiling */
-    private void bounceWall(Ball ball){
+    private void bounceWall(Ball ball, Player player1, Player player2){
         checkLeftWallCollision(ball);
         checkRightWallCollision(ball);
-        checkBottomWallCollision(ball);
+        checkBottomWallCollision(ball, player1, player2);
         checkTopWallCollision(ball);
     }
     /* method that ensures the ball bounces off of the player */
@@ -78,10 +78,10 @@ public class GameLogic {
     }
 
     /* check if the ball collides with the bottom wall OBS! check logic!*/
-    public void checkBottomWallCollision(Ball ball) {
+    public void checkBottomWallCollision(Ball ball, Player player1, Player player2) {
         if (ball.getSpeed().getyDirection() == Speed.DIRECTION_DOWN
                 && ball.getBallPositionY() + ball.getBitmap().getHeight() / 2 >= screenHeight) {
-            ball.moveBallToServePosition();
+            moveBallToServePosition(player1,player2);
         }
     }
 
