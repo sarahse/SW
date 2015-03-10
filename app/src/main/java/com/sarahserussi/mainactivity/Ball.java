@@ -11,6 +11,12 @@ public class Ball {
     private int ballSpeedY;
     private Speed speed;
     private int testHakon;
+    private Player player;
+
+    /* constructor */
+    public Ball (){
+
+    }
 
     public int getBallPositionX() {
         return ballPositionX;
@@ -31,6 +37,18 @@ public class Ball {
     public Speed getSpeed() { return speed; }
 
     public void setSpeed(Speed speed) { this.speed = speed; }
+
+    public void setServePositionToPlayer1(){
+        /* need to get screenWidth & screenHeight */
+        this.setBallPositionX(200);
+        this.setBallPositionY(200);
+    }
+
+    public void setServePositionToPlayer2(){
+        /* need to get screenWidth & screenHeight */
+        this.setBallPositionX(400);
+        this.setBallPositionY(400);
+    }
 
     /* checks if the ball touches the player, needs editing (bitmapRect) */
     public boolean touchesPlayer(Player player){
