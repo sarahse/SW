@@ -13,13 +13,22 @@ public class GameLogic {
     private Player player2; //player on the right side
     private Speed speed;
 
-    /* method that ensures the ball bounces off of the walls, but not the ceiling */
-    private void bounceWall(){
+    /* Constructor */
+    public GameLogic(){
 
     }
-    /* method that ensures the ball bounces off of the player */
-    private void bouncePlayer(){
 
+    /* method that ensures the ball bounces off of the walls, but not the ceiling */
+    private void bounceWall(Ball ball){
+        checkLeftWallCollision(ball);
+        checkRightWallCollision(ball);
+        checkBottomWallCollision(ball);
+        checkTopWallCollision(ball);
+    }
+    /* method that ensures the ball bounces off of the player */
+    private void bouncePlayer(Player player, Ball ball){
+        checkIntersect(player, ball);
+        /* if the player jumps and hits the ball, the ball should get a higher speed */
     }
 
     /* method that checks if the ball is dropped on the ground and gives point to the winning player*/
@@ -78,6 +87,23 @@ public class GameLogic {
 
     /* check if the ball collides with the top wall OBS! check logic!*/
     public void checkTopWallCollision(Ball ball){
+        if (ball.getSpeed().getyDirection() == Speed.DIRECTION_UP
+                && ball.getBallPositionY() + ball.getBitmap().getHeight() / 2 >= screenHeight) {
+            /* needs to have a timer function that delays the descent of the ball */
+            ball.getSpeed().toggleYDirection();
+        }
+    }
+
+    /* check if the ball intersects with the player */
+    public void checkIntersect(Player player, Ball ball){
+        if (ball.touchesPlayer(player)){
+            ball.getSpeed().toggleXDirection();
+            ball.getSpeed().toggleYDirection();
+        }
 
     }
+
+
+
+
 }

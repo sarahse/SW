@@ -10,8 +10,7 @@ public class Ball {
     private int ballSpeedX;
     private int ballSpeedY;
     private Speed speed;
-
-    /* method that toggles direction */
+    private int testHakon;
 
     public int getBallPositionX() {
         return ballPositionX;
@@ -32,4 +31,14 @@ public class Ball {
     public Speed getSpeed() { return speed; }
 
     public void setSpeed(Speed speed) { this.speed = speed; }
+
+    /* checks if the ball touches the player, needs editing (bitmapRect) */
+    public boolean touchesPlayer(Player player){
+        if(this.getBallPositionX() == player.getPositionX()
+                && this.getBallPositionY() == player.getPositionY()){
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

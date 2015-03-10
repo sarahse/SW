@@ -49,7 +49,12 @@ public class Player {
     public void setSpeed(Speed speed) {
         this.speed = speed;
     }
+
     /* jump */
+    public void jump(){
+
+    }
+
 
     /* move left and right */
 
