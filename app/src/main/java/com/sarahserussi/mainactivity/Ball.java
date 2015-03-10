@@ -11,6 +11,7 @@ public class Ball {
     private int ballSpeedY;
     private Speed speed;
     private int superspeedtest1;
+    private int test2;
 
     /* method that toggles direction */
 
