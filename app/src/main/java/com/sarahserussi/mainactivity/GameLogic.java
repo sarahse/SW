@@ -26,8 +26,8 @@ public class GameLogic {
         checkTopWallCollision(ball);
     }
     /* method that ensures the ball bounces off of the player */
-    private void bouncePlayer(){
-
+    private void bouncePlayer(Player player, Ball ball){
+        if ()
     }
 
     /* method that checks if the ball is dropped on the ground and gives point to the winning player*/
@@ -90,6 +90,15 @@ public class GameLogic {
                 && ball.getBallPositionY() + ball.getBitmap().getHeight() / 2 >= screenHeight) {
             /* needs to have a timer function that delays the descent of the ball */
             ball.getSpeed().toggleYDirection();
+        }
+    }
+
+    /* check if the ball intersects with the player */
+    public boolean checkIntersect(Player player, Ball ball){
+        if (ball.touchesPlayer(player)){
+            return true;
+        } else {
+            return false;
         }
     }
 }
