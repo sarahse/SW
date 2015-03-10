@@ -81,7 +81,7 @@ public class GameLogic {
     public void checkBottomWallCollision(Ball ball) {
         if (ball.getSpeed().getyDirection() == Speed.DIRECTION_DOWN
                 && ball.getBallPositionY() + ball.getBitmap().getHeight() / 2 >= screenHeight) {
-            ball.getSpeed().toggleYDirection();
+            ball.moveBallToServePosition();
         }
     }
 
@@ -103,7 +103,11 @@ public class GameLogic {
 
     }
 
-
+    public void moveBallToServePosition(Player player1, Player player2){
+        if (hasWon(player1){
+            ball.
+        };)
+    }
 
 
 }
