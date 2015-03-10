@@ -46,7 +46,7 @@ public class GameLogic {
     }
 
      /* check if a player has won */
-    private void hasWon(Player player){
+    private boolean hasWon(Player player){
 
     }
 
@@ -104,10 +104,10 @@ public class GameLogic {
     }
 
     public void moveBallToServePosition(Player player1, Player player2){
-        if (hasWon(player1){
-            ball.
-        };)
+        if (hasWon(player1)){
+            ball.setServePositionToPlayer1();
+        } else if (hasWon(player2)){
+            ball.setServePositionToPlayer2();
+        }
     }
-
-
 }
