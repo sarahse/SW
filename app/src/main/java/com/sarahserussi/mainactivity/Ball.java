@@ -10,6 +10,7 @@ public class Ball {
     private int ballSpeedX;
     private int ballSpeedY;
     private Speed speed;
+    private int testHakon;
 
     /* method that toggles direction */
 
