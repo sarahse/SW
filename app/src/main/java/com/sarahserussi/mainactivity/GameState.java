@@ -7,20 +7,31 @@ import android.view.MotionEvent;
  */
 public class GameState {
 
+    float eX, eY;
     /* Where the touch methods go */
      /* init */
     public GameState () {
+        //add player
+        //set playerPos
+        //add ball
+        //set servePos
+        //add background
+        //set new score
 
     }
 
     public void update() {
+        //if event.getX is left of playerPos - move player left
+        //move player right
+        //player jump
 
     }
 
     public boolean onTouchEvent(MotionEvent event) {
-        float x = event.getX();
-        float y = event.getY();
+        eX = event.getX();
+        eY = event.getY();
 
-        //update()
+        update();
+        return true;
     }
 }
