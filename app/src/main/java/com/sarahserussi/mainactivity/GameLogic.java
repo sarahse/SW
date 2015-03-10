@@ -27,7 +27,8 @@ public class GameLogic {
     }
     /* method that ensures the ball bounces off of the player */
     private void bouncePlayer(Player player, Ball ball){
-        if ()
+        checkIntersect(player, ball);
+        /* if the player jumps and hits the ball, the ball should get a higher speed */
     }
 
     /* method that checks if the ball is dropped on the ground and gives point to the winning player*/
@@ -94,11 +95,15 @@ public class GameLogic {
     }
 
     /* check if the ball intersects with the player */
-    public boolean checkIntersect(Player player, Ball ball){
+    public void checkIntersect(Player player, Ball ball){
         if (ball.touchesPlayer(player)){
-            return true;
-        } else {
-            return false;
+            ball.getSpeed().toggleXDirection();
+            ball.getSpeed().toggleYDirection();
         }
+
     }
+
+
+
+
 }
