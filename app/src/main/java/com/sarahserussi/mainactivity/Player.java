@@ -53,6 +53,7 @@ public class Player {
 
     /* move left and right */
 
+    /* Constructor */
     public Player(){
 
     }

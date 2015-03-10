@@ -3,7 +3,7 @@ package com.sarahserussi.mainactivity;
 /**
  * Created by sarahserussi on 04.03.15.
  */
-public class Speed {
+public class  Speed {
 
     public static final int DIRECTION_RIGHT = 1;
     public static final int DIRECTION_LEFT = -1;
