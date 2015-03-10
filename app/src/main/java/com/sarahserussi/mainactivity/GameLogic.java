@@ -19,8 +19,11 @@ public class GameLogic {
     }
 
     /* method that ensures the ball bounces off of the walls, but not the ceiling */
-    private void bounceWall(){
-
+    private void bounceWall(Ball ball){
+        checkLeftWallCollision(ball);
+        checkRightWallCollision(ball);
+        checkBottomWallCollision(ball);
+        checkTopWallCollision(ball);
     }
     /* method that ensures the ball bounces off of the player */
     private void bouncePlayer(){
