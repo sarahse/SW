@@ -29,18 +29,21 @@ public class GameState {
         int aIndex = e.getActionIndex();
         int x,y;
         switch(a) {
-            case MotionEvent.ACTION_DOWN:
-            case MotionEvent.ACTION_POINTER_DOWN:
+            //case MotionEvent.ACTION_DOWN:
+            //case MotionEvent.ACTION_POINTER_DOWN:
+            /* Action between touched down and up */
             case MotionEvent.ACTION_MOVE:
-                x = (int)e.getX(aIndex);
-                y = (int)e.getY(aIndex);
+                x = (int) e.getX(aIndex);
+                y = (int) e.getY(aIndex);
 
                 /*if(m.leftPressed(x, y)) {
                     movingLeft = true;
                     movingRight = false;
                     }
                   */
+        }
     }
+
 
     public boolean onTouchEvent(MotionEvent event) {
         eX = event.getX();
@@ -48,7 +51,7 @@ public class GameState {
 
 
 
-        update();
+        update(event);
         return true;
     }
 }
