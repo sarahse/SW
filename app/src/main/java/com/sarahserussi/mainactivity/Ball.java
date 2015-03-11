@@ -10,8 +10,7 @@ public class Ball {
     private int ballSpeedX;
     private int ballSpeedY;
     private Speed speed;
-    private int testHakon;
-    private Player player;
+
 
     /* constructor */
     public Ball (){
