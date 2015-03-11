@@ -48,6 +48,7 @@ public class GameState {
     public boolean onTouchEvent(MotionEvent event) {
         eX = event.getX();
         eY = event.getY();
+        private int test;
 
 
 
